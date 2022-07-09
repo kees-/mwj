@@ -3,7 +3,7 @@
 
 ;; ========== SETUP ============================================================
 (def default-db
-  {:routing {:route nil}})
+  {:routing {:route ""}})
 
 (def <sub (comp deref re-frame/subscribe))
 (def <sub-lazy re-frame/subscribe)
@@ -23,15 +23,9 @@
  (path [:routing])
  (fn [routing [_ e]]
    (let [hash-val (->> e .-newURL js/URL. .-hash rest (reduce str))]
-     (js/console.log hash-val)
      (assoc routing :route hash-val))))
 
 ;; ========== SUBS =============================================================
-(reg-sub
- ::test
- (fn [_ _]
-   "Does nothing"))
-
 ; Returns the STRING stored in state to compare against routes in views.
 (reg-sub
  ::current-route
