@@ -1,15 +1,14 @@
 (ns kees.c08.views
-  (:require [kees.c08.rf :as rf :refer [<sub >evt]]))
+  (:require [kees.c08.rf :as rf :refer [<sub >evt]]
+            [kees.c08.views.signup :as views.signup]))
 
 ;; ========== INDIVIDUAL VIEWS =================================================
 (defn tank
   []
   (let []
-    [:div#tank "fishtank"]))
-
-(defn signup
-  []
-  [:div#signup "allows you to sign up for the email list."])
+    [:div#tank
+     [:article "fishtank"]
+     [:a {:href "#list"} "list"]]))
 
 ;; ========== COMPILATION ======================================================
 (defn routes
@@ -18,7 +17,7 @@
   [hash]
   (case hash
     "" [tank]
-    "list" [signup]
+    "list" [views.signup/signup-list]
     [tank]))
 
 (defn main
