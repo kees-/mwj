@@ -1,7 +1,7 @@
 (ns kees.c08.main
   (:require [reagent.dom :as rdom]
             [re-frame.core :as re-frame]
-            [kees.c08.rf :as rf :refer [>evt-now]]
+            [kees.c08.rf :as rf :refer [>evt >evt-now]]
             [kees.c08.views :as views]))
 
 (def debug?
@@ -15,7 +15,8 @@
   (re-frame/clear-subscription-cache!)
   (let [root-el (.getElementById js/document "app")]
     (rdom/unmount-component-at-node root-el)
-    (rdom/render [views/main-panel] root-el)))
+    (rdom/render [views/root-panel] root-el)
+    (.addEventListener js/window "hashchange" #(>evt [::rf/handle %]))))
 
 (defn init []
   (>evt-now [::rf/boot])
