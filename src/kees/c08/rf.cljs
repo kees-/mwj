@@ -1,5 +1,5 @@
 (ns kees.c08.rf
-  (:require [re-frame.core :as re-frame :refer [reg-event-db reg-event-fx reg-sub reg-fx path]]))
+  (:require [re-frame.core :as re-frame :refer [reg-event-db reg-event-fx reg-sub reg-fx reg-cofx inject-cofx path]]))
 
 ;; ========== SETUP ============================================================
 (def default-db
@@ -10,12 +10,29 @@
 (def >evt re-frame/dispatch)
 (def >evt-now re-frame/dispatch-sync)
 
+; Covers two cases in one handler.
+; 1. Notices any change of URL;
+;    meaning to dispatch a change of content all you need is a NORMAL <a> !
+; 2. Handles back and forward buttons which would otherwise be "unseen."
+(reg-fx
+ :add-hash-handler
+ (fn []
+   (.addEventListener js/window "hashchange" #(>evt [::handle %]))))
+
+(reg-cofx
+ :current-hash
+ (fn [cofx _]
+   (assoc cofx :hash (->> js/window .-location .-hash rest (reduce str)))))
 ;; ========== EVENTS ===========================================================
-(reg-event-db
+; 1. Gets current hash by cofx
+; 2. Adds an event handler to watch hash
+; 3. Mounts default db WITH hash
+(reg-event-fx
  ::boot
- (fn [_ _]
-   ; Bad! Rewrite using fx
-   (assoc-in default-db [:routing :route] (-> js/window .-location .-hash))))
+ [(inject-cofx :current-hash)]
+ (fn [{:keys [hash]} _]
+   {:db (assoc-in default-db [:routing :route] hash)
+    :fx [[:add-hash-handler nil]]}))
 
 ; Fired when browser event handler detects change of hash
 (reg-event-db

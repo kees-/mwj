@@ -33,5 +33,5 @@
   (let []
     [:<>
      [:header
-      [:h1 "Placeholder"]]
+      [:h1>a {:href "#"} "Home"]]
      [main]]))

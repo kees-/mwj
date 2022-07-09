@@ -15,8 +15,7 @@
   (re-frame/clear-subscription-cache!)
   (let [root-el (.getElementById js/document "app")]
     (rdom/unmount-component-at-node root-el)
-    (rdom/render [views/root-panel] root-el)
-    (.addEventListener js/window "hashchange" #(>evt [::rf/handle %]))))
+    (rdom/render [views/root-panel] root-el)))
 
 (defn init []
   (>evt-now [::rf/boot])
