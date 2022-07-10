@@ -19,6 +19,7 @@
  (fn []
    (.addEventListener js/window "hashchange" #(>evt [::handle %]))))
 
+; Pulls current hash value straight from browser
 (reg-cofx
  :current-hash
  (fn [cofx _]
