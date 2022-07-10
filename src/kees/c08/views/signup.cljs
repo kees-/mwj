@@ -7,8 +7,10 @@
         fdjs (str "https://assets.flodesk.com/universal.js?v=" timestamp)
         fdmjs (str "https://assets.flodesk.com/universal.mjs?v=" timestamp)]
     {#(true? (.-fdLoaded js/window)) "/_js/preFlodesk.js"
-     #(nil? 0) fdjs
-     #(nil? 1) fdmjs}))
+     ; The following two tests are the same
+     ; Just so the hashmap has unique keys
+     #(exists? (aget js/window "fd")) fdjs
+     #(.hasOwnProperty js/window "fd") fdmjs}))
 
 (defn- contact-capture
   "Returns an identifying :div and renders internal Flodesk logic."
