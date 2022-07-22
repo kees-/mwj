@@ -1,5 +1,6 @@
 (ns kees.c08.views.signup
   (:require [reagent.core :as reagent]
+            [kees.c08.rf :as rf :refer [>evt <sub]]
             [kees.c08.utils.loader :as loader]))
 
 (def ^:private fd-externs
@@ -39,6 +40,9 @@
 
 (defn signup-list
   []
-  [:div#signup
-   [form-loader]
-   [:article "allows you to signup..."]])
+  (>evt [::rf/add-class "signup-link" "hidden"])
+  [:div#signup-list.full.bg-moccasin
+   [:div#signup
+    [form-loader]]])
+
+; Creative testimonial "horses"

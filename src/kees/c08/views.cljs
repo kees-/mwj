@@ -12,6 +12,25 @@
     "list" [views.signup/signup-list]
     [views.fishtank/tank]))
 
+;; ========== COMPONENTS =======================================================
+(defn ph-number
+  []
+  [:a.ph
+   {:href "tel:+13108481990"}
+   [:article "+1 310 848 1990"]])
+
+(defn signup-list
+  []
+  [:a#signup-link
+   {:href "#list"}
+   [:article "News ➜"]])
+
+(defn logo
+  []
+  [:a.logo-container
+   {:href "#"}
+   [:article.logo "MWJ"]])
+
 (defn main
   "Body in charge of rendering the content of the route detected by handler."
   []
@@ -22,6 +41,7 @@
   "Main panel always rendered by mount-root."
   []
   [:<>
-   [:header
-    [:h1>a {:href "#"} "Home"]]
-   [main]])
+   [main]
+   [logo]
+   [ph-number]
+   [signup-list]])

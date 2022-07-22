@@ -1,9 +1,11 @@
-(ns kees.c08.views.fishtank)
+(ns kees.c08.views.fishtank
+  (:require [kees.c08.rf :as rf :refer [>evt <sub]]))
 
 (defn tank
   []
   (let []
-    [:div#tank
+    (>evt [::rf/remove-class "signup-link" "hidden"])
+    [:div#tank.full
      [:article "fishtank"]
      [:a {:href "#list"} "list"]]))
 

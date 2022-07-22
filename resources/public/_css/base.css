@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+  color: ivory;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+header {
+  position: absolute;
+  z-index: 10;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.bor {
+  border: 1px solid red;
+}
+
+.bg-moccasin {
+  background: honeydew;
+}
+
+.full {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 8rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.logo-container {
+  position: fixed;
+  z-index: 10;
+  top: 5%;
+  left: 2rem;
+  border-left: 1.5px solid ivory;
+  border-right: 1.5px solid ivory;
+  font-size: 2.5rem;
+  font-family: 'Unna', serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.logo::before, .logo::after {
+  content: "\273B";
+  font-size: 1.8rem;
+  color: beige;
+  padding: 0 .3rem;
+  font-weight: 500;
+  vertical-align: 6%;
+}
+
+.ph {
+  position: fixed;
+  z-index: 10;
+  bottom: 5%;
+  left: 2.5rem;
+  font-size: 1.6rem;
+  font-family: 'Unna', serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
+#tank {
+  background-color: deepskyblue;
+}
+
+#signup {
+  background: lightblue;
+  margin: 2rem auto 0;
+  max-width: fit-content;
+}
+
+#signup input, #signup button {
+  background: mintcream;
+}
+
+#signup-link {
+  position: fixed;
+  z-index: 10;
+  bottom: 5%;
+  right: 2.5rem;
+  font-size: 1.6rem;
+  font-family: 'Unna', serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
+#signup-link:after {
+
+}

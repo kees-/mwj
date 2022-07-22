@@ -24,6 +24,7 @@
  :current-hash
  (fn [cofx _]
    (assoc cofx :hash (->> js/window .-location .-hash rest (reduce str)))))
+
 ;; ========== EVENTS ===========================================================
 ; 1. Gets current hash by cofx
 ; 2. Adds an event handler to watch hash
@@ -42,6 +43,18 @@
  (fn [routing [_ e]]
    (let [hash-val (->> e .-newURL js/URL. .-hash rest (reduce str))]
      (assoc routing :route hash-val))))
+
+(reg-event-fx
+ ::add-class
+ (fn [_ [_ id class]]
+   (let [el (.getElementById js/document id)]
+     (-> el .-classList (.add class)))))
+
+(reg-event-fx
+ ::remove-class
+ (fn [_ [_ id class]]
+   (let [el (.getElementById js/document id)]
+     (-> el .-classList (.remove class)))))
 
 ;; ========== SUBS =============================================================
 ; Returns the STRING stored in state to compare against routes in views.
