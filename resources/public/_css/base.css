@@ -26,14 +26,6 @@ a {
   padding-top: 8rem;
 }
 
-.hidden {
-  visibility: hidden;
-}
-
-.teal {
-  color: teal;
-}
-
 #logo-container {
   position: fixed;
   z-index: 10;
@@ -55,7 +47,6 @@ a {
   vertical-align: 6%;
 }
 
-
 #ph {
   position: fixed;
   z-index: 10;
@@ -65,20 +56,6 @@ a {
   font-family: 'Unna', serif;
   font-weight: 700;
   line-height: 1;
-}
-
-#tank {
-  background-color: deepskyblue;
-}
-
-#signup {
-  background: lightblue;
-  margin: 2rem auto 0;
-  max-width: fit-content;
-}
-
-#signup input, #signup button {
-  background: mintcream;
 }
 
 #signup-link {

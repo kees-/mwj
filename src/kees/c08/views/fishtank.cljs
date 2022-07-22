@@ -3,7 +3,7 @@
 
 (defn style
   []
-  [])
+  [[:#tank {:background "deepskyblue"}]])
 
 (defn main
   []

@@ -46,6 +46,10 @@
                       :color "teal"}]
    [:.logo::before :.logo::after {:color "teal"}]
    [:#ph {:color "teal"}]
+   [:#signup {:background "lightblue"
+              :margin "2rem auto 0"
+              :max-width "fit-content"}
+    [:input :button {:background "mintcream"}]]
    [:#signup-link {:visibility "hidden"}]
    [:#signup-list {:background "honeydew"}]])
 
