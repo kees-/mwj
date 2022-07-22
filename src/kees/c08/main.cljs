@@ -13,7 +13,10 @@
 
 (defn ^:dev/after-load mount-root []
   (re-frame/clear-subscription-cache!)
-  (let [root-el (.getElementById js/document "app")]
+  (let [root-el (.getElementById js/document "app")
+        style-el (.getElementById js/document "page-style")]
+    (rdom/unmount-component-at-node style-el)
+    (rdom/render [views/page-style] style-el)
     (rdom/unmount-component-at-node root-el)
     (rdom/render [views/root-panel] root-el)))
 

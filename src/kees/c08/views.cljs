@@ -38,6 +38,10 @@
   (let [route (<sub [::rf/current-route])]
     [:main (routes route)]))
 
+(defn page-style
+  []
+  "")
+
 (defn root-panel
   "Main panel always rendered by mount-root."
   []
