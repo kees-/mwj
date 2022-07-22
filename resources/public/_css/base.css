@@ -20,10 +20,6 @@ a {
   color: inherit;
 }
 
-.bor {
-  border: 1px solid red;
-}
-
 .bg-moccasin {
   background: honeydew;
 }
@@ -38,29 +34,49 @@ a {
   visibility: hidden;
 }
 
-.logo-container {
+.teal {
+  color: teal;
+}
+
+#logo-container {
   position: fixed;
   z-index: 10;
   top: 5%;
   left: 2rem;
-  border-left: 1.5px solid ivory;
-  border-right: 1.5px solid ivory;
   font-size: 2.5rem;
   font-family: 'Unna', serif;
   font-weight: 700;
   line-height: 1;
 }
 
-.logo::before, .logo::after {
+.logo-container-light {
+  border-left: 1.5px solid ivory;
+  border-right: 1.5px solid ivory;
+}
+
+.logo-container-dark {
+  border-left: 1.5px solid darkcyan;
+  border-right: 1.5px solid darkcyan;
+  color: teal;
+}
+
+#logo::before, #logo::after {
   content: "\273B";
   font-size: 1.8rem;
-  color: beige;
   padding: 0 .3rem;
   font-weight: 500;
   vertical-align: 6%;
 }
 
-.ph {
+.logo-light::before, .logo-light::after {
+  color: beige;
+}
+
+.logo-dark::before, .logo-dark::after {
+  color: teal;
+}
+
+#ph {
   position: fixed;
   z-index: 10;
   bottom: 5%;
@@ -97,5 +113,6 @@ a {
 }
 
 #signup-link:after {
-
+  content: " ➜";
+  font-size: 1.2rem;
 }

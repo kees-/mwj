@@ -5,9 +5,9 @@
   []
   (let []
     (>evt [::rf/remove-class "signup-link" "hidden"])
+    (>evt [::rf/logo-light-mode])
     [:div#tank.full
-     [:article "fishtank"]
-     [:a {:href "#list"} "list"]]))
+     [:article "fishtank"]]))
 
 ; Todo
 ; Make blue

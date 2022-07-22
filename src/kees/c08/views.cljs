@@ -10,12 +10,13 @@
   (case hash
     "" [views.fishtank/tank]
     "list" [views.signup/signup-list]
+    ;; "horses" [views.horses/main]
     [views.fishtank/tank]))
 
 ;; ========== COMPONENTS =======================================================
 (defn ph-number
   []
-  [:a.ph
+  [:a#ph
    {:href "tel:+13108481990"}
    [:article "+1 310 848 1990"]])
 
@@ -23,13 +24,13 @@
   []
   [:a#signup-link
    {:href "#list"}
-   [:article "News ➜"]])
+   "News"])
 
 (defn logo
   []
-  [:a.logo-container
+  [:a#logo-container
    {:href "#"}
-   [:article.logo "MWJ"]])
+   [:article#logo "MWJ"]])
 
 (defn main
   "Body in charge of rendering the content of the route detected by handler."

@@ -19,6 +19,16 @@
  (fn []
    (.addEventListener js/window "hashchange" #(>evt [::handle %]))))
 
+(reg-fx
+ :add-class
+ (fn [[id class]]
+   (-> (.getElementById js/document id) .-classList (.add class))))
+
+(reg-fx
+ :remove-class
+ (fn [[id class]]
+   (-> (.getElementById js/document id) .-classList (.remove class))))
+
 ; Pulls current hash value straight from browser
 (reg-cofx
  :current-hash
@@ -47,14 +57,30 @@
 (reg-event-fx
  ::add-class
  (fn [_ [_ id class]]
-   (let [el (.getElementById js/document id)]
-     (-> el .-classList (.add class)))))
+   {:fx [[:add-class [id class]]]}))
 
 (reg-event-fx
  ::remove-class
  (fn [_ [_ id class]]
-   (let [el (.getElementById js/document id)]
-     (-> el .-classList (.remove class)))))
+   {:fx [[:remove-class [id class]]]}))
+
+(reg-event-fx
+ ::logo-light-mode
+ (fn [_ _]
+   {:fx [[:remove-class ["logo-container" "logo-container-dark"]]
+         [:remove-class ["logo" "logo-dark"]]
+         [:add-class ["logo-container" "logo-container-light"]]
+         [:add-class ["logo" "logo-light"]]
+         [:remove-class ["ph" "teal"]]]}))
+
+(reg-event-fx
+ ::logo-dark-mode
+ (fn [_ _]
+   {:fx [[:remove-class ["logo-container" "logo-container-light"]]
+         [:remove-class ["logo" "logo-light"]]
+         [:add-class ["logo-container" "logo-container-dark"]]
+         [:add-class ["logo" "logo-dark"]]
+         [:add-class ["ph" "teal"]]]}))
 
 ;; ========== SUBS =============================================================
 ; Returns the STRING stored in state to compare against routes in views.

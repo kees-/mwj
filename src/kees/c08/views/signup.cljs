@@ -41,6 +41,7 @@
 (defn signup-list
   []
   (>evt [::rf/add-class "signup-link" "hidden"])
+  (>evt [::rf/logo-dark-mode])
   [:div#signup-list.full.bg-moccasin
    [:div#signup
     [form-loader]]])
