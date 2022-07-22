@@ -20,10 +20,6 @@ a {
   color: inherit;
 }
 
-.bg-moccasin {
-  background: honeydew;
-}
-
 .full {
   width: 100vw;
   height: 100vh;
@@ -47,17 +43,8 @@ a {
   font-family: 'Unna', serif;
   font-weight: 700;
   line-height: 1;
-}
-
-.logo-container-light {
   border-left: 1.5px solid ivory;
   border-right: 1.5px solid ivory;
-}
-
-.logo-container-dark {
-  border-left: 1.5px solid darkcyan;
-  border-right: 1.5px solid darkcyan;
-  color: teal;
 }
 
 #logo::before, #logo::after {
@@ -68,13 +55,6 @@ a {
   vertical-align: 6%;
 }
 
-.logo-light::before, .logo-light::after {
-  color: beige;
-}
-
-.logo-dark::before, .logo-dark::after {
-  color: teal;
-}
 
 #ph {
   position: fixed;

@@ -1,5 +1,6 @@
 (ns kees.c08.views
-  (:require [kees.c08.rf :as rf :refer [<sub >evt]]
+  (:require [garden.core :as garden :refer [css]]
+            [kees.c08.rf :as rf :refer [<sub >evt]]
             [kees.c08.views.signup :as views.signup]
             [kees.c08.views.fishtank :as views.fishtank]))
 
@@ -8,10 +9,18 @@
   ; Could be improved, i.e protocol
   [hash]
   (case hash
-    "" [views.fishtank/tank]
-    "list" [views.signup/signup-list]
+    "" [views.fishtank/main]
+    "list" [views.signup/main]
     ;; "horses" [views.horses/main]
-    [views.fishtank/tank]))
+    [views.fishtank/main]))
+
+(defn styles
+  [hash]
+  (css
+   ((case hash
+      "" views.fishtank/style
+      "list" views.signup/style
+      views.fishtank/style))))
 
 ;; ========== COMPONENTS =======================================================
 (defn ph-number
@@ -40,7 +49,8 @@
 
 (defn page-style
   []
-  "")
+  (let [route (<sub [::rf/current-route])]
+    (styles route)))
 
 (defn root-panel
   "Main panel always rendered by mount-root."

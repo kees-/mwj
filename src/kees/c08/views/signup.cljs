@@ -38,11 +38,20 @@
     :loading [:div "loading"]
     :loaded  [contact-capture {:id id}]}])
 
-(defn signup-list
+;; ========== PUBLIC ===========================================================
+(defn style
   []
-  (>evt [::rf/add-class "signup-link" "hidden"])
-  (>evt [::rf/logo-dark-mode])
-  [:div#signup-list.full.bg-moccasin
+  [[:#logo-container {:border-left "1.5px solid darkcyan"
+                      :border-right "1.5px solid darkcyan"
+                      :color "teal"}]
+   [:.logo::before :.logo::after {:color "teal"}]
+   [:#ph {:color "teal"}]
+   [:#signup-link {:visibility "hidden"}]
+   [:#signup-list {:background "honeydew"}]])
+
+(defn main
+  []
+  [:div#signup-list.full
    [:div#signup
     [form-loader]]])
 
