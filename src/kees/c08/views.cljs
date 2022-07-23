@@ -2,7 +2,8 @@
   (:require [garden.core :as garden :refer [css]]
             [kees.c08.rf :as rf :refer [<sub >evt]]
             [kees.c08.views.signup :as views.signup]
-            [kees.c08.views.fishtank :as views.fishtank]))
+            [kees.c08.views.fishtank :as views.fishtank]
+            [kees.c08.views.horses :as views.horses]))
 
 (defn routes
   "Return the content of a route."
@@ -11,7 +12,7 @@
   (case hash
     "" [views.fishtank/main]
     "list" [views.signup/main]
-    ;; "horses" [views.horses/main]
+    "horses" [views.horses/main]
     [views.fishtank/main]))
 
 (defn styles
@@ -57,6 +58,8 @@
   []
   [:<>
    [main]
-   [logo]
-   [ph-number]
-   [signup-list]])
+   [:header
+    [logo]]
+   [:footer
+    [ph-number]
+    [signup-list]]])
