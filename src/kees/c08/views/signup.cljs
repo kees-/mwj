@@ -3,6 +3,12 @@
             [kees.c08.rf :as rf :refer [>evt <sub]]
             [kees.c08.utils.loader :as loader]))
 
+(defn loading
+  []
+  [:div
+   [:img
+    {:src "/_asset/loading.gif"}]])
+
 (def ^:private fd-externs
   (let [timestamp (-> (.now js/Date) (/ 120000) (js/Math.floor) (* 60))
         fdjs (str "https://assets.flodesk.com/universal.js?v=" timestamp)
@@ -35,7 +41,7 @@
   [id]
   [loader/load-js
    {:scripts fd-externs
-    :loading [:div "loading"]
+    :loading [loading]
     :loaded  [contact-capture {:id id}]}])
 
 ;; ========== PUBLIC ===========================================================
@@ -57,6 +63,7 @@
   []
   [:div#signup-list.full
    [:div#signup
+    [:p "Sign up for the MWJ mailing list for more"]
     [form-loader]]])
 
 ; Creative testimonial "horses"

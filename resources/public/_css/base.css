@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@1&display=swap');
 
 html {
   color: ivory;
@@ -18,6 +19,14 @@ header {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+iframe {
+  width: 100%;
+}
+
+.a {
+  cursor: pointer;
 }
 
 .full {

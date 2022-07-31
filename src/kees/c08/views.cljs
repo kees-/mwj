@@ -21,6 +21,7 @@
    ((case hash
       "" views.fishtank/style
       "list" views.signup/style
+      "horses" views.horses/style
       views.fishtank/style))))
 
 ;; ========== COMPONENTS =======================================================
