@@ -19,6 +19,11 @@
  (fn []
    (.addEventListener js/window "hashchange" #(>evt [::handle %]))))
 
+(reg-fx
+ :scroll-to-top
+ (fn []
+   (.scrollTo js/window #js{:top 0})))
+
 ; Pulls current hash value straight from browser
 (reg-cofx
  :current-hash
@@ -37,12 +42,12 @@
     :fx [[:add-hash-handler nil]]}))
 
 ; Fired when browser event handler detects change of hash
-(reg-event-db
+(reg-event-fx
  ::handle
- (path [:routing])
- (fn [routing [_ e]]
+ (fn [{:keys [db]} [_ e]]
    (let [hash-val (->> e .-newURL js/URL. .-hash rest (reduce str))]
-     (assoc routing :route hash-val))))
+     {:db (assoc-in db [:routing :route] hash-val)
+      :fx [[:scroll-to-top nil]]})))
 
 ;; ========== SUBS =============================================================
 ; Returns the STRING stored in state to compare against routes in views.
