@@ -48,13 +48,15 @@
   []
   [[:#logo-container {:border-left "1.5px solid darkcyan"
                       :border-right "1.5px solid darkcyan"
-                      :color "teal"}]
+                      :color "teal"
+                      :background "transparent"}]
    [:.logo::before :.logo::after {:color "teal"}]
    [:.loading {:display "block"
                :margin "0 auto"
                :padding "2rem"
                :width "max-content"}]
-   [:#ph {:color "teal"}]
+   [:#ph {:color "teal"
+          :background "transparent"}]
    [:#signup {:background "lightblue"
               :margin "2rem auto 0"
               :max-width "fit-content"}

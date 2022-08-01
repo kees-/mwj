@@ -6,6 +6,7 @@
    [:main {:padding-top "7rem"}]
    [:#signup-link {:visibility "hidden"}]
    [:#ph {:visibility "hidden"}]
+   [:#logo-container {:background "transparent"}]
    [:#horses-outer-wrapper {:display "flex"
                             :max-width "80%"
                             :margin "0 auto"

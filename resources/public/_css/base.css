@@ -57,23 +57,26 @@ iframe {
 #ph {
   position: fixed;
   z-index: 10;
-  bottom: 5%;
-  left: 2.5rem;
+  bottom: 4.5%;
   font-size: 1.6rem;
   font-family: 'Unna', serif;
   font-weight: 700;
   line-height: 1;
+  padding: .4rem .6rem .4rem 2.5rem;
+  background: darkslategray;
 }
 
 #signup-link {
   position: fixed;
   z-index: 10;
-  bottom: 5%;
-  right: 2.5rem;
+  bottom: 4.5%;
+  right: 0;
   font-size: 1.6rem;
   font-family: 'Unna', serif;
   font-weight: 700;
   line-height: 1;
+  padding: .4rem 2.5rem .4rem .6rem;
+  background-color: darkslategray;
 }
 
 #signup-link:after {
