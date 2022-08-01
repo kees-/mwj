@@ -55,7 +55,27 @@
    [:#signup {:background "lightblue"
               :margin "2rem auto 0"
               :max-width "fit-content"}
-    [:input :button {:background "mintcream"}]]
+    [:input {:background "ivory"
+             :border "1px inset powderblue"}]
+    [:button {:background "mintcream"
+              :border-radius ".3rem"
+              :margin-top ".5rem"
+              :box-shadow "0 0 4px 0 #e7f7f6"}
+     [:&:hover {:background "#ebfffa"}]]
+    [:hr {:max-width "60%"
+          :margin ".5rem auto -1rem"
+          :height "1.5px"
+          :border-width "0"
+          :background "ivory"}]
+    [:article {:text-align "center"
+               :padding-top "2rem"
+               :margin "0 auto"
+               :font-family "sans-serif"
+               :line-height "1.25"
+               :font-weight "800"
+               :text-transform "uppercase"
+               :font-size "2rem"
+               :max-width "30rem"}]]
    [:#signup-link {:visibility "hidden"}]
    [:#signup-list {:background "honeydew"}]])
 
@@ -63,7 +83,8 @@
   []
   [:div#signup-list.full
    [:div#signup
-    [:p "Sign up for the MWJ mailing list for more"]
+    [:article "Sign up for the MWJ mailing list for more:"]
+    [:hr]
     [form-loader]]])
 
 ; Creative testimonial "horses"

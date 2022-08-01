@@ -1,5 +1,4 @@
-(ns kees.c08.views.fishtank
-  (:require [kees.c08.rf :as rf :refer [>evt <sub]]))
+(ns kees.c08.views.fishtank)
 
 (defn horse1
   []

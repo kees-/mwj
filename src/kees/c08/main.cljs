@@ -2,13 +2,11 @@
   (:require [reagent.dom :as rdom]
             [re-frame.core :as re-frame]
             [kees.c08.rf :as rf :refer [>evt >evt-now]]
+            [kees.c08.dev :as dev]
             [kees.c08.views :as views]))
 
-(def debug?
-  ^boolean goog.DEBUG)
-
 (defn dev-setup []
-  (when debug?
+  (when dev/debug?
     (println "dev mode")))
 
 (defn ^:dev/after-load mount-root []

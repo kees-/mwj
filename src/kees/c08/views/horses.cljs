@@ -1,19 +1,20 @@
-(ns kees.c08.views.horses)
+(ns kees.c08.views.horses
+  (:require [kees.c08.dev :as dev]))
 
 (defn style
   []
-  [[:main {:background "#432109"
-           :padding-top "7rem"}]
+  [[:html {:background "#432109"}]
+   [:main {:padding-top "7rem"}]
    [:#signup-link {:visibility "hidden"}]
    [:#ph {:visibility "hidden"}]
    [:#horses-outer-wrapper {:display "flex"
                             :max-width "80%"
-                            :max-height "90%"
                             :margin "0 auto"
                             :flex-display "row"
+                            :flex-wrap "wrap-reverse"
                             :align-items "stretch"}]
    [:#horses-inner-wrapper {:display "flex"
-                            :margin "0 auto"
+                            :margin "0 auto 1rem"
                             :align-items "stretch"
                             :flex-grow 1
                             :flex-direction "column"
@@ -29,22 +30,26 @@
                             :padding ".45rem"}]
    [:#horses-pdf {:margin "0 auto"
                   :flex-grow 1
+                  :min-width "10rem"
                   :align-self "stretch"}]
    [:#horses-info {:margin-right "2rem"
                    :font-family "sans-serif"
                    :display "flex"
-                   :flex-direction "column"}
+                   :align-self "flex-end"
+                   :flex-direction "column"
+                   :margin-bottom "4rem"}
     [:span:first-child {:font-size "4rem"
                         :font-family "'IM Fell English', serif"
-                        :line-height "1"}]
+                        :margin-top "1.5rem"
+                        :line-height ".7"}]
     [:#date {:font-size "1.5rem"
              :font-weight "900"}]
     [:article {:align-self "flex-end"
                :background "white"
                :color "#432109"
-               :margin-top ".5rem"
+               :margin-top "1.25rem"
                :margin-right "-1rem"
-               :padding "1.5rem .5rem .3rem"
+               :padding "1.75rem .5rem .3rem"
                :font-size "1.3rem"
                :text-align "right"
                :line-height "1.2"}]
@@ -70,5 +75,7 @@
      "Created in collaboration with MWJ."]]
    [:div#horses-inner-wrapper
     [:iframe#horses-pdf
-     {:src "https://mwj-persistent.s3.us-west-1.amazonaws.com/HORSES-July-2022-sample.pdf#navpanes=0"
+     {:src (if dev/debug?
+             "https://mwj-persistent.s3.us-west-1.amazonaws.com/HORSES-July-2022-sample.pdf#navpanes=0"
+             "https://mwj-persistent.s3.us-west-1.amazonaws.com/HORSES-July-2022.pdf#navpanes=0")
       :height "450"}]]])
