@@ -80,3 +80,14 @@ iframe {
   content: " ➜";
   font-size: 1.2rem;
 }
+
+.stamp {
+  border-width: 1rem;
+  border-style: solid;
+  border-image-source: url(//www.w3cplus.com/sites/default/files/blogs/2019/1904/border.svg?id=2);
+  border-image-slice: 5;
+  border-image-repeat: round;
+  border-image-width: 2.3;
+  border-image-outset: 1.25;
+  box-shadow: 0 0 0 1rem white;
+}

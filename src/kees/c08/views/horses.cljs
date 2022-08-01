@@ -9,7 +9,7 @@
    [:#horses-outer-wrapper {:display "flex"
                             :max-width "80%"
                             :margin "0 auto"
-                            :flex-display "row"
+                            :flex-direction "row"
                             :flex-wrap "wrap-reverse"
                             :align-items "stretch"}]
    [:#horses-inner-wrapper {:display "flex"
@@ -20,8 +20,8 @@
                             :background "black"
                             :border-width "1rem"
                             :border-style "solid"
-                            :border-image-source "url(//www.w3cplus.com/sites/default/files/blogs/2019/1904/border.svg?id=2)"
-                            :border-image-slice "5"
+                            :border-image-source "url(/_asset/border.svg)"
+                            :border-image-slice "30%"
                             :border-image-repeat "round"
                             :border-image-width "2.3"
                             :border-image-outset "1.25"
@@ -75,5 +75,5 @@
      "Created in collaboration with MWJ."]]
    [:div#horses-inner-wrapper
     [:iframe#horses-pdf
-     {:src "https://mwj-persistent.s3.us-west-1.amazonaws.com/HORSES-July-2022.pdf#view=fitH&navpanes=0"
+     {:src "https://mwj-persistent.s3.us-west-1.amazonaws.com/HORSES-July-2022-sample.pdf#view=fitH&navpanes=0"
       :height "450"}]]])
