@@ -18,9 +18,9 @@
                             :flex-grow 1
                             :flex-direction "column"
                             :background "white"
-                            :box-shadow "0 0 0 .5rem white"
+                            :box-shadow "0 0 0 .25rem white"
                             :padding ".45rem"}
-    [:iframe {:border "2.5rem solid black"
+    [:iframe {:border "2rem solid black"
               :-webkit-mask-box-image "url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/stampTiles.svg) 25% round"}]]
    [:#horses-pdf {:margin "0 auto"
                   :flex-grow 1
@@ -43,7 +43,7 @@
                :background "white"
                :color "#432109"
                :margin-top "1.25rem"
-               :margin-right "-1.5rem"
+               :margin-right "-1.75rem"
                :padding "1.75rem .5rem .3rem"
                :font-size "1.3rem"
                :text-align "right"
@@ -70,5 +70,6 @@
      "Created in collaboration with MWJ."]]
    [:div#horses-inner-wrapper
     [:iframe#horses-pdf
-     {:src "https://mwj-persistent.s3.us-west-1.amazonaws.com/HORSES-July-2022-sample.pdf#view=fitH&navpanes=0"
+     {:src "https://drive.google.com/viewerng/viewer?embedded=true&url=mwj-persistent.s3.us-west-1.amazonaws.com%2FHORSES-July-2022-sample.pdf"
+      :title "HORSES July 2022"
       :height "450"}]]])
