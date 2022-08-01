@@ -1,11 +1,10 @@
 (ns kees.c08.views.signup
   (:require [reagent.core :as reagent]
-            [kees.c08.rf :as rf :refer [>evt <sub]]
             [kees.c08.utils.loader :as loader]))
 
 (defn loading
   []
-  [:div
+  [:div.loading
    [:img
     {:src "/_asset/loading.gif"}]])
 
@@ -51,6 +50,10 @@
                       :border-right "1.5px solid darkcyan"
                       :color "teal"}]
    [:.logo::before :.logo::after {:color "teal"}]
+   [:.loading {:display "block"
+               :margin "0 auto"
+               :padding "2rem"
+               :width "max-content"}]
    [:#ph {:color "teal"}]
    [:#signup {:background "lightblue"
               :margin "2rem auto 0"
@@ -63,12 +66,12 @@
               :box-shadow "0 0 4px 0 #e7f7f6"}
      [:&:hover {:background "#ebfffa"}]]
     [:hr {:max-width "60%"
-          :margin ".5rem auto -1rem"
+          :margin ".75rem auto -.75rem"
           :height "1.5px"
           :border-width "0"
           :background "ivory"}]
     [:article {:text-align "center"
-               :padding-top "2rem"
+               :padding "2rem .75rem 0"
                :margin "0 auto"
                :font-family "sans-serif"
                :line-height "1.25"
@@ -77,7 +80,9 @@
                :font-size "2rem"
                :max-width "30rem"}]]
    [:#signup-link {:visibility "hidden"}]
-   [:#signup-list {:background "honeydew"}]])
+   [:#signup-list {:background "honeydew"
+                   :padding-left "1rem"
+                   :padding-right "1rem"}]])
 
 (defn main
   []

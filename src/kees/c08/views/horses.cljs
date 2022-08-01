@@ -1,5 +1,4 @@
-(ns kees.c08.views.horses
-  (:require [kees.c08.dev :as dev]))
+(ns kees.c08.views.horses)
 
 (defn style
   []
@@ -39,6 +38,7 @@
                    :flex-direction "column"
                    :margin-bottom "4rem"}
     [:span:first-child {:font-size "4rem"
+                        :font-style "italic"
                         :font-family "'IM Fell English', serif"
                         :margin-top "1.5rem"
                         :line-height ".7"}]
@@ -75,7 +75,5 @@
      "Created in collaboration with MWJ."]]
    [:div#horses-inner-wrapper
     [:iframe#horses-pdf
-     {:src (if dev/debug?
-             "https://mwj-persistent.s3.us-west-1.amazonaws.com/HORSES-July-2022-sample.pdf#navpanes=0"
-             "https://mwj-persistent.s3.us-west-1.amazonaws.com/HORSES-July-2022.pdf#navpanes=0")
+     {:src "https://mwj-persistent.s3.us-west-1.amazonaws.com/HORSES-July-2022.pdf#view=fitH&navpanes=0"
       :height "450"}]]])
