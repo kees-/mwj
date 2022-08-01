@@ -71,6 +71,6 @@
      "Created in collaboration with MWJ."]]
    [:div#horses-inner-wrapper
     [:iframe#horses-pdf
-     {:src "https://drive.google.com/viewerng/viewer?embedded=true&url=mwj-persistent.s3.us-west-1.amazonaws.com%2FHORSES-July-2022-sample.pdf"
+     {:src "https://drive.google.com/viewerng/viewer?embedded=true&url=mwj-persistent.s3.us-west-1.amazonaws.com%2FHORSES-July-2022.pdf"
       :title "HORSES July 2022"
       :height "450"}]]])
