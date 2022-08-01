@@ -17,16 +17,11 @@
                             :align-items "stretch"
                             :flex-grow 1
                             :flex-direction "column"
-                            :background "black"
-                            :border-width "1rem"
-                            :border-style "solid"
-                            :border-image-source "url(/_asset/border.svg)"
-                            :border-image-slice "30%"
-                            :border-image-repeat "round"
-                            :border-image-width "2.3"
-                            :border-image-outset "1.25"
-                            :box-shadow "0 0 0 1rem white"
-                            :padding ".45rem"}]
+                            :background "white"
+                            :box-shadow "0 0 0 .5rem white"
+                            :padding ".45rem"}
+    [:iframe {:border "2.5rem solid black"
+              :-webkit-mask-box-image "url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/stampTiles.svg) 25% round"}]]
    [:#horses-pdf {:margin "0 auto"
                   :flex-grow 1
                   :min-width "10rem"
@@ -48,7 +43,7 @@
                :background "white"
                :color "#432109"
                :margin-top "1.25rem"
-               :margin-right "-1rem"
+               :margin-right "-1.5rem"
                :padding "1.75rem .5rem .3rem"
                :font-size "1.3rem"
                :text-align "right"
