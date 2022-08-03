@@ -10,7 +10,9 @@
 
 (defn jelly1
   []
-  [:div#jelly1.fish
+  [:a#jelly1.fish
+   {:href "https://4moreroom.blogspot.com/"
+    :target "_blank"}
    [:img
     {:src "/_asset/tank/jelly1.gif"
      :draggable false}]])

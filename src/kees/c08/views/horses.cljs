@@ -14,7 +14,7 @@
                             :flex-wrap "wrap-reverse"
                             :align-items "stretch"}]
    [:#horses-inner-wrapper {:display "flex"
-                            :margin "0 auto 1rem"
+                            :margin "0 auto 1rem .75rem"
                             :align-items "stretch"
                             :flex-grow 1
                             :flex-direction "column"
@@ -27,20 +27,19 @@
                   :flex-grow 1
                   :min-width "10rem"
                   :align-self "stretch"}]
-   [:#horses-info {:margin-right "2rem"
-                   :font-family "sans-serif"
+   [:#horses-info {:font-family "sans-serif"
                    :display "flex"
-                   :align-self "flex-end"
                    :flex-direction "column"
-                   :margin-bottom "4rem"}
+                   :margin-bottom "6rem"}
     [:span:first-child {:font-size "4rem"
                         :font-style "italic"
                         :font-family "'IM Fell English', serif"
                         :margin-top "1.5rem"
-                        :line-height ".7"}]
-    [:#date {:font-size "1.5rem"
+                        :line-height ".7"
+                        :margin-right "1.25rem"}]
+    #_[:#date {:font-size "1.5rem"
              :font-weight "900"}]
-    [:article {:align-self "flex-end"
+    #_[:article {:align-self "flex-end"
                :background "white"
                :color "#432109"
                :margin-top "1.25rem"
@@ -49,28 +48,34 @@
                :font-size "1.3rem"
                :text-align "right"
                :line-height "1.2"}]
-    [:span:last-child {:font-style "italic"
-                       :font-size "0.9rem"
-                       :font-weight "300"
-                       :margin-top "8rem"
-                       :max-width "15rem"}]]])
+    [:div:last-child {:margin-top "3.75rem"
+                      :font-style "italic"
+                      :font-size "0.9rem"
+                      :font-weight "300"
+                      :max-width "15rem"
+                      :align-self "flex-end"}
+     [:p {:margin-bottom "1.25rem"
+          :line-height 1.25
+          :text-align "justify"
+          :text-align-last "right"
+          :max-width "96%"}]
+     [:p:last-of-type {:margin-bottom "3rem"}]]]])
 
 (defn main
   []
   [:div#horses-outer-wrapper
    [:div#horses-info
     [:span "HORSES"]
-    [:span#date "July 2022"]
-    [:article
+    #_[:span#date "July 2022"]
+    #_[:article
      "By Amanda"
      [:br]
      "Shank"]
-    [:span
-     "HORSES is a creative testimonial of space and transformation."
-     [:br]
-     "Created in collaboration with MWJ."]]
+    [:div
+     [:p "I’ll say everything that I see while we poke around and you take notes before we circle back at the end to pick the three to five action items that will move the most energy for you/your declared intent/story."]
+     [:p "Amanda did everything. She went to Paris, came home, did more, and then sent me this."]]]
    [:div#horses-inner-wrapper
     [:iframe#horses-pdf
-     {:src "https://drive.google.com/viewerng/viewer?embedded=true&url=mwj-persistent.s3.us-west-1.amazonaws.com%2FHORSES-July-2022.pdf"
-      :title "HORSES July 2022"
+     {:src "https://mwj-persistent.s3.us-west-1.amazonaws.com/HORSES.pdf"
+      :title "HORSES"
       :height "450"}]]])

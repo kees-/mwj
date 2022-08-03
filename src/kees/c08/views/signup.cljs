@@ -90,7 +90,7 @@
   []
   [:div#signup-list.full
    [:div#signup
-    [:article "Sign up for the MWJ mailing list for more:"]
+    [:article "Sign up 4 more:"]
     [:hr]
     [form-loader]]])
 

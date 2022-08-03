@@ -21,10 +21,20 @@
   <summary>
     Assets
   </summary>
-  
+
 Large assets (needing persistent storage) will be outsourced from the repo.
 
 This is due to github file size limits and privacy, not putting people's content in a clone-able repo.
 
 The main downside is this will require maintaining asset URLS manually, no big deal
 </details>
+
+
+# 220803
+- [x] News -> 'Sign up 4 more'
+- [x] Rename pdf (-> do native iframe, push, then look to react-pdf)
+- [x] Remove google pdf viewer
+- [x] Strike july
+- [x] Add copy
+- [x] Strike amanda
+- [x] Blog link
