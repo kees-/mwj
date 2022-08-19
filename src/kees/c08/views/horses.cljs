@@ -24,12 +24,12 @@
                             :margin "0 auto 1rem .75rem"
                             :align-items "stretch"
                             :flex-grow 1
-                            :flex-direction "column"
-                            :background "white"
-                            :box-shadow "0 0 0 .25rem white"
-                            :padding ".45rem"}
-    [:iframe {:border "2rem solid black"
-              :-webkit-mask-box-image "url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/stampTiles.svg) 25% round"}]]
+                            :flex-direction "column"}
+    [:#inner2 {:background "white"
+               :padding ".45rem"
+               :box-shadow "0 0 0 .25rem white"}
+     [:iframe {:border "2rem solid black"
+               :-webkit-mask-box-image "url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/stampTiles.svg) 25% round"}]]]
    [:#horses-pdf {:margin "0 auto"
                   :flex-grow 1
                   :min-width "10rem"
@@ -81,12 +81,14 @@
     [:div
      [:p "I’ll say everything that I see while we poke around and you take notes before we circle back at the end to pick the three to five action items that will move the most energy for you/your declared intent/story."]
      [:p "Amanda did everything. She went to Paris, came home, did more, and then sent me this."]]]
-   [:div
+   [:div#horses-inner-wrapper
+    {:style {:display "flex"
+             :flex-grow 1}}
     [:a.pdf-outbound
      {:href "https://mwj-persistent.s3.us-west-1.amazonaws.com/HORSES.pdf"
       :target "_blank"}
      [:i.bx.bx-link-external]]
-    [:div#horses-inner-wrapper
+    [:div#inner2
      [:iframe#horses-pdf
       {:src "https://mwj-persistent.s3.us-west-1.amazonaws.com/HORSES.pdf#view=fitH&navpanes=0"
        :title "HORSES"
