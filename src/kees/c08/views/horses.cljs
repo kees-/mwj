@@ -13,6 +13,13 @@
                             :flex-direction "row"
                             :flex-wrap "wrap-reverse"
                             :align-items "stretch"}]
+   [:.pdf-outbound {:display "block"
+                    :margin "0 .25rem 0 auto"
+                    :width "max-content"}
+    [:i {:font-size "2rem"
+         :padding ".25rem"
+         :color "black"
+         :background "white"}]]
    [:#horses-inner-wrapper {:display "flex"
                             :margin "0 auto 1rem .75rem"
                             :align-items "stretch"
@@ -74,8 +81,13 @@
     [:div
      [:p "I’ll say everything that I see while we poke around and you take notes before we circle back at the end to pick the three to five action items that will move the most energy for you/your declared intent/story."]
      [:p "Amanda did everything. She went to Paris, came home, did more, and then sent me this."]]]
-   [:div#horses-inner-wrapper
-    [:iframe#horses-pdf
-     {:src "https://mwj-persistent.s3.us-west-1.amazonaws.com/HORSES.pdf"
-      :title "HORSES"
-      :height "450"}]]])
+   [:div
+    [:a.pdf-outbound
+     {:href "https://mwj-persistent.s3.us-west-1.amazonaws.com/HORSES.pdf"
+      :target "_blank"}
+     [:i.bx.bx-link-external]]
+    [:div#horses-inner-wrapper
+     [:iframe#horses-pdf
+      {:src "https://mwj-persistent.s3.us-west-1.amazonaws.com/HORSES.pdf#view=fitH&navpanes=0"
+       :title "HORSES"
+       :height "450"}]]]])
