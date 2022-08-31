@@ -27,9 +27,18 @@
 ;; ========== COMPONENTS =======================================================
 (defn ph-number
   []
-  [:a#ph
-   {:href "tel:+13108481990"}
-   [:article "+1 310 848 1990"]])
+  [:div#ph
+   [:span
+    [:i {:class "bx bx-mail-send"}]
+    [:a
+     {:href "mailto:book@frgee.love"
+      :target "_blank"}
+     [:article "book@frgee.love"]]]
+   [:span
+    [:i {:class "bx bx-phone-call"}]
+    [:a
+     {:href "tel:+13108481990"}
+     [:article "+1 310 848 1990"]]]])
 
 (defn signup-list
   []
