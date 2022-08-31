@@ -72,7 +72,7 @@ iframe {
   line-height: 1;
 }
 #ph a {
-  width: 11rem;
+  width: 11.5rem;
   text-align: right;
   filter: brightness(0.92);
 }
@@ -87,7 +87,7 @@ iframe {
 #ph span {
   display: flex;
   flex-direction: row-reverse;
-  transform: translateX(-11rem);
+  transform: translateX(-12rem);
   transition: transform 0.5s;
   gap: 0.65rem;
 }
