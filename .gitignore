@@ -14,7 +14,7 @@
 /.shadow-cljs/
 
 .DS_Store
-/.clj-kondo
-/.calva
-/.lsp
+.clj-kondo
+.calva
+.lsp
 /resources/public/_js/compiled
