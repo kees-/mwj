@@ -19,7 +19,9 @@
 
 (defn fish1
   []
-  [:div#fish1.fish
+  [:a#fish1.fish
+   {:href "https://www.visionsofbutterfly.com"
+    :target "_blank"}
    [:img
     {:src "/_asset/tank/fish1.gif"
      :draggable false}]])

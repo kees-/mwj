@@ -29,22 +29,16 @@
   []
   [:div#ph
    [:span
-    [:i {:class "bx bx-link"}]
-    [:a
-     {:href "https://www.visionsofbutterfly.com"
-      :target "_blank"}
-     [:article "visionsofbutterfly.com"]]]
-   [:span
     [:i {:class "bx bx-mail-send"}]
     [:a
-     {:href "mailto:high@visionsofbutterfly.com"
+     {:href "mailto:book@frgee.love"
       :target "_blank"}
-     [:article "high@visionsofbutterfly.com"]]]
+     [:article "book@frgee.love"]]]
    [:span
     [:i {:class "bx bx-phone-call"}]
     [:a
-     {:href "tel:+19173401409"}
-     [:article "+1 917 340 1409"]]]])
+     {:href "tel:+13108481990"}
+     [:article "+1 310 848 1990"]]]])
 
 (defn signup-list
   []
