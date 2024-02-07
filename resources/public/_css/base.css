@@ -30,7 +30,7 @@ iframe {
   width: 100vw;
   height: 100vh;
   padding-top: 7rem;
-  padding-bottom: 6rem;
+  padding-bottom: 8rem;
 }
 
 #logo-container {
@@ -72,7 +72,7 @@ iframe {
   line-height: 1;
 }
 #ph a {
-  width: 11.5rem;
+  width: 18.5rem;
   text-align: right;
   filter: brightness(0.92);
 }
@@ -87,7 +87,7 @@ iframe {
 #ph span {
   display: flex;
   flex-direction: row-reverse;
-  transform: translateX(-12rem);
+  transform: translateX(-19.2rem);
   transition: transform 0.5s;
   gap: 0.65rem;
 }
