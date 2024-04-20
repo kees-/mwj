@@ -2,6 +2,10 @@ html {
   color: ivory;
 }
 
+body {
+  background: darkslategray;
+}
+
 main {
   width: 100vw;
   height: 100vh;
@@ -119,4 +123,57 @@ iframe {
   border-image-width: 2.3;
   border-image-outset: 1.25;
   box-shadow: 0 0 0 1rem white;
+}
+
+#tank {
+  max-width: 85%;
+  margin: auto;
+}
+
+.full {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 7rem;
+  padding-bottom: 8rem;
+}
+
+#tank2 {
+  background: deepskyblue;
+  background-image: url(../_asset/tank/bottom.png), url(../_asset/tank/top.png);
+  background-position: left bottom, left top;
+  background-size: initial;
+  background-repeat: repeat-x, repeat-x;
+  image-rendering: pixelated;
+  border: 4px solid grey;
+  height: 100%;
+}
+
+#horse {
+  top: 55%;
+  left: 65%;
+}
+
+#fish1 {
+  top: 55%;
+  left: 20%;
+}
+
+.fish {
+  position: absolute;
+  display: inline-block;
+}
+
+#jelly1 {
+  top: 40%;
+  left: 45%;
+}
+
+article {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.phone {
+  margin-right: -7.5px;
+  /* border: solid 1px red; */
 }
