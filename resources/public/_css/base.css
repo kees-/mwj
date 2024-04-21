@@ -150,12 +150,12 @@ iframe {
 
 #horse {
   top: 55%;
-  left: 65%;
+  left: 60%;
 }
 
 #fish1 {
   top: 55%;
-  left: 20%;
+  left: 15%;
 }
 
 .fish {
@@ -165,7 +165,25 @@ iframe {
 
 #jelly1 {
   top: 40%;
-  left: 45%;
+  left: 40%;
+}
+
+.nymph {
+  position: absolute;
+  display: inline-block;
+  top: 35%;
+  left: 75%;
+  width: 150px;
+  animation: floatAnimation 3s infinite alternate ease-in-out;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
 article {
