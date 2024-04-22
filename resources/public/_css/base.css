@@ -4,6 +4,7 @@ html {
 
 body {
   background: darkslategray;
+  overflow-x: hidden;
 }
 
 main {
@@ -194,4 +195,28 @@ article {
 .phone {
   margin-right: -7.5px;
   /* border: solid 1px red; */
+}
+
+@media only screen and (max-width: 768px) {
+
+  #horse {
+    top: 55%;
+    left: 60%;
+  }
+  
+  #fish1 {
+    top: 55%;
+    left: 12%;
+  }
+  
+  #jelly1 {
+    top: 40%;
+    left: 30%;
+  }
+  
+  .nymph {
+    top: 27%;
+    left: 50%;
+    width: 130px;
+  }
 }
